@@ -1,0 +1,62 @@
+@import url("https://use.typekit.net/grn5hmv.css");
+
+body {
+    background-color: #F0BA5C;
+    margin: 0;
+    padding: 40px;
+    color: #D1772E;
+}
+
+h1 { 
+    font-family: "gotham", sans-serif;
+    font-weight: 800; font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1; text-align: center;
+    color: #D1772E;
+    margin: 0 0 40px; 
+} 
+
+h2 {
+    font-family: "gotham", sans-serif; 
+    font-weight: 500; font-size: 2rem; 
+    line-height: 1.2; text-align: center; 
+    margin: 0; padding: 20px 20px 12px; 
+    color: #D1772E; 
+} 
+
+h2:hover { 
+    color: #2b3a5a; 
+    transform: translateY(-2px); 
+    cursor: url("assets/Cursor.png") 8 8, auto;
+} 
+
+.Inhalt:hover{
+    background-color: #b4c2fe; 
+    color: #2b3a5a; 
+    border: 2px solid #2e33d1; 
+    cursor: url("assets/Cursor.png") 8 8, auto;
+
+}
+
+li { list-style: none; 
+}
+
+.Steine { 
+    font-family: "gotham", sans-serif; 
+    font-weight: 300; font-style: normal; 
+    font-size: 1.5rem; line-height: 1.4; 
+    color: #D1772E; 
+    margin: 0 0 30px; 
+} 
+
+.Inhalt { 
+    font-family: "gotham", sans-serif; 
+    font-weight: 500; font-size: 1.2rem; 
+    text-align: center; line-height: 1.5; 
+    background-color: #FEE6B4; 
+    color: #D1772E; 
+    border: 2px solid #D1772E; 
+    border-radius: 20px; 
+    padding: 24px 28px; 
+    margin: 0 auto; 
+    max-width: 700px; 
+} 

@@ -1,0 +1,155 @@
+  @import url("https://use.typekit.net/grn5hmv.css");
+
+body {
+    cursor: url("assets/Cursor_2.png") 8 8, auto;
+    background-color: #bfb3ca;
+    margin: 0;
+    padding: 90px;
+
+}
+
+h1 {
+    font-family: "warbler-display", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 1.1;
+
+    text-align: left;
+    margin: 0 0 60px;
+
+    animation: titelAnimation 5s ease-in-out infinite;
+}
+
+@keyframes titelAnimation {
+    0%, 100% {
+        color: #222e9a;
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        color: #582b5a;
+        transform: translateY(-6px) rotate(-1deg);
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 900px;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Buchstabe {
+    font-family: "warbler-display", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1;
+
+    color: #382b5a;
+
+    text-align: left;
+
+    margin-top: 60px;
+    padding-bottom: 12px;
+
+    border-bottom: 1.5px solid #2b3a5a;
+}
+
+.Steine {
+    position: relative;
+
+    font-family: "warbler-display", sans-serif;
+    font-weight: 400;
+
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: "warbler-display", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.75rem;
+    line-height: 1.2;
+
+    color: #651b6c;
+
+    text-align: left;
+
+    margin: 0;
+    padding: 10px 40px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+h2:hover {
+    color: #2b3a5a;
+    font-style: italic;
+    transform: translateX(8px);
+}
+
+.Inhalt {
+    font-family: "warbler-display", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+
+    line-height: 1.4;
+
+    color: #651b6c;
+
+    padding: 10px 40px;
+    margin: 0 0 10px;
+
+    transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.Inhalt p {
+    margin: 4px 0;
+}
+
+.Steine img {
+    position: fixed;
+    
+    right: 15vw;
+    top: 45%;
+
+    width: 280px;
+    height: 280px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-50%) scale(0.95);
+
+    transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+
+    pointer-events: none;
+}
+
+.Steine:hover img {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(-50%) scale(1);
+}
