@@ -1,0 +1,84 @@
+@import url("https://use.typekit.net/erc2srp.css");
+
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  cursor: url("assets/Mongi_Cursor.png") 8 8, auto;
+  margin: 0;
+  background: #f9e8f1;
+  color: #6b5264;
+  font-family: "loretta-display", serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0 50px;
+  font-family: "loretta-display", serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  font-style: normal;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  grid-auto-flow: dense;
+  gap: 10px;
+  margin: 25px;
+  padding: 0;
+  align-items: stretch;
+}
+
+.bild {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #ead2e3;
+  border-radius: 2px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  will-change: transform;
+}
+
+.bild img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.bild:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(107, 82, 100, 0.18);
+  z-index: 5;
+}
+
+.bild:hover img {
+  transform: scale(1.04);
+}
+
+.bild:nth-child(1),
+.bild:nth-child(6) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.bild:nth-child(4),
+.bild:nth-child(5),
+.bild:nth-child(10),
+.bild:nth-child(12),
+.bild:nth-child(13) {
+  grid-column: span 1;
+}
+
