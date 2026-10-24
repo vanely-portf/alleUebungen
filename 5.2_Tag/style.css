@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Spicy+Rice&display=swap');
+
+h1 {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 9rem;
+    color: #1a5521;
+    gap: 4rem;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffc2e9;
+    /*background-image: url("assets/beach-bongos.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+
+}
+
+.a_1, .l, .o, .h, .a_2 {
+    transition: all 1s;
+}
+
+.a_1:hover, .l:hover, .o:hover, .h:hover, .a_2:hover {
+    color: #3e0b0b;
+    transform: scale(150%) translateY(-50px) rotate(40deg);
+    cursor: url("assets/Cursor_Flwer.png") 8 8, auto;
+}
+
+
+
+.K_1, .K_2, .K_3, .K_4, .K_5 {
+    font-family: "Black And White Picture", serif;
+    color: #c22b1d;
+    transition: all 0.5s;
+}
+
+.K_2:hover, .K_4:hover{
+    cursor: url("/assets/Cat_scuba.gif") 8 8, auto;
+    color: #151590;
+    transform: translateY(-50px) rotate(15deg);
+}
+
+.K_1:hover, .K_3:hover, .K_5:hover {
+    color: #151590;
+    cursor: url("assets/Cat_Cursor.png") 8 8, auto;
+    transform: translateY(-50px) translateX(-60px) rotate(-15deg);
+}
