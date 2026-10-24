@@ -1,0 +1,79 @@
+.group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+/* beide Elemente liegen ursprünglich übereinander */
+.not_transformed,
+.transformed {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height: 400px;
+  width: 400px;
+}
+
+/* zur visuellen Unterscheidung zwei unterschiedliche Stile zuweisen */
+.not_transformed {
+  background-color: black;
+}
+
+.transformed {
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+  font-size: 40px;
+  transition: all 1s ease-in-out;
+}
+
+
+/* Transformationen */
+
+/* neue Klasse */
+.group:hover .verschoben {
+  transform: translate(10px, 200px);
+}
+
+.group:hover .rotieren {
+transform: rotate(45deg);
+
+/* Beispiel: linke obere Ecke */
+/* transform-origin: top left; */
+
+/* Beispiel: 50px nach rechts und 50px nach unten */
+/* transform-origin: 50px 50px; */
+}
+
+/* Beide Achsen gleich skaliert */
+.group:hover .scale {
+  transform: scale(0.5);
+
+/* Beide Achsen unterschiedlich skaliert */
+/* transform: scale(0.8, 2); */
+}
+
+.group:hover .skew{
+    transform: skewX(10deg);
+    /*transform: skew(20deg, 10deg);*/
+}
+
+.group:hover .kombiniert {
+  transform: translate(300px, 50px) rotate(45deg) scale(0.5);
+}
+
+
+/*Mein Beispiel*/
+
+.Hallo_animiert {
+  height: 400px;
+  width: 400px;
+  background-color: rgba(85, 255, 0, 0.735);
+  color: white;
+  font-size: 50px; text-align: center; vertical-align: middle;
+  transition: all 1s ease-in-out;
+}
+
+.Hallo_animiert:hover {
+  transform: translate(300px, 50px) scale(0.5);
+  background-color: rgba(140, 80, 80, 0.735);
+
+}
