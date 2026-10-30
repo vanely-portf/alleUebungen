@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+body{
+    font-family: "Afacad Flux", sans-serif;
+
+}
+
+.goodbye{
+    /* animation-name: saygoodbye; */
+    animation-duration:3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both; /*animation bleibt draussen*/
+
+    font-weight: 500;
+    font-size: 7rem;
+}
+
+.Yaho{
+    animation-name: sayyaho; 
+    animation-duration:7s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both; /*animation bleibt draussen*/
+
+    font-weight: 500;
+    font-size: 5rem;
+    color: rgb(68, 53, 94);
+}
+
+.hello{
+    /* animation-name: sayhello; */
+    font-size: 4rem;
+    font-weight: 200;
+    animation-duration:3s;
+    animation-iteration-count: 5; /*mit einer Zahl wird die Animation nur so oft abgespielt*/
+    animation-delay: 0.5s;
+    animation-fill-mode: both; /*animation bleibt draussen*/
+
+}
+
+@keyframes sayyaho{
+0% {
+    transform: translate(-100vw, 0);
+}
+25%{
+    transform: translate(0vw, 0vh);
+}
+50%{
+    transform: translate(0vw, 0vh);
+}
+75%{
+    transform: translate(0vw, 0vh);
+}
+100%{
+    transform: translate(0vw, 0vh);
+}
+}
+
+@keyframes saygoodbye{
+0% {
+    transform: translate(-100vw, 0);
+}
+40%{
+    transform: translate(20vw, 0);
+    color: red;
+}
+60%{
+    transform: translate(0, 0);
+    color:rgb(211, 211, 53)
+}
+100%{
+    transform: translate(100vw, 0);
+    color:green
+}
+}
+
+@keyframes sayhello{
+0%{
+    transform: translate(100vw, 0)
+
+}
+50%{
+    transform: translate(0, 0);
+
+}
+100%{
+    font-weight: 800;
+
+}
+}
