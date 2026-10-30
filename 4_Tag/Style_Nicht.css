@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Libre+Barcode+128+Text&display=swap');
+
+body {
+    font-family: 'Libre Barcode 128 Text', sans-serif;
+    font-size: 5rem;
+    background-color: #5b93d4;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Was:hover, .body:hover {
+    transform: translateY(-10px);
+    color: #f0f0f0;
+}
+
+.Was {
+    transition: all 0.5s;
+    color: #890e0e;
+}
