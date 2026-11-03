@@ -1,0 +1,32 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;   
+  background: #0f1322;
+  color: #efe6d8;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.Hello {
+  font-size: 18vw;
+}
+
+.Text_1, .Text_2, .Text_3 {
+  font-size: 4vw;
+}
+
+@keyframes auftauchen {
+  0%   { opacity: 0; letter-spacing: 0.5em;   filter: blur(10px); }
+  60%  { opacity: 1; letter-spacing: -0.05em; filter: blur(0); }
+  100% { opacity: 1; letter-spacing: 0; }
+}
+
+.Hello  { animation: auftauchen 2s ease-out 0s both; }
+.Text_1 { animation: auftauchen 2s ease-out 2.5s both; }
+.Text_2 { animation: auftauchen 2s ease-out 4.5s both; }
+.Text_3 { animation: auftauchen 2s ease-out 6.5s both; }

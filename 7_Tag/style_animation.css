@@ -6,7 +6,7 @@ body{
 }
 
 .goodbye{
-    /* animation-name: saygoodbye; */
+    animation-name: saygoodbye;
     animation-duration:3s;
     animation-delay: 1s;
     animation-iteration-count: infinite;
@@ -29,7 +29,7 @@ body{
 }
 
 .hello{
-    /* animation-name: sayhello; */
+    animation-name: sayhello;
     font-size: 4rem;
     font-weight: 200;
     animation-duration:3s;
@@ -44,16 +44,16 @@ body{
     transform: translate(-100vw, 0);
 }
 25%{
-    transform: translate(0vw, 0vh);
+    transform: translate(25vw, 0vh);
 }
 50%{
-    transform: translate(0vw, 0vh);
+    transform: translate(50vw, 0vh);
 }
 75%{
-    transform: translate(0vw, 0vh);
+    transform: translate(75vw, 0vh);
 }
 100%{
-    transform: translate(0vw, 0vh);
+    transform: translate(100vw, 0vh);
 }
 }
 
