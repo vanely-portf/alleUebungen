@@ -18,7 +18,6 @@ html {
     min-height: 100%;
 }
 
-/* Der body wird zur "Buchseite" */
 body {
     max-width: 680px;
     margin: 4rem auto;
@@ -33,7 +32,6 @@ body {
     counter-reset: kapitel;
 }
 
-/* Überschrift – wird automatisch eingefügt */
 body::before {
     content: "Inhaltsverzeichnis";
     display: block;
@@ -51,7 +49,6 @@ ul, ol {
     padding: 0;
 }
 
-/* Einträge */
 li {
     list-style: none;
     counter-increment: kapitel;
@@ -70,7 +67,6 @@ li a {
     transition: background 0.25s ease, color 0.25s ease, padding 0.25s ease;
 }
 
-/* Nummer vor jedem Eintrag: 01, 02, 03 ... */
 li a::before {
     content: counter(kapitel, decimal-leading-zero);
     font-family: 'Fraunces', Georgia, serif;
@@ -80,7 +76,6 @@ li a::before {
     transition: color 0.25s ease;
 }
 
-/* Punktlinie + Pfeil am Ende */
 li a::after {
     content: "→";
     flex: 1;
@@ -94,7 +89,6 @@ li a::after {
     transition: color 0.25s ease;
 }
 
-/* Hover-Effekt */
 li a:hover,
 li a:focus-visible {
     background: #f7efe6;
@@ -110,7 +104,6 @@ li a:focus-visible::after {
     color: var(--accent);
 }
 
-/* Handy */
 @media (max-width: 600px) {
     body {
         margin: 0;
