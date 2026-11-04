@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
 body {
   margin: 0;
   height: 100vh;
@@ -8,8 +10,7 @@ body {
   text-align: center;   
   background: #0f1322;
   color: #efe6d8;
-  font-family: Georgia, serif;
-  font-style: italic;
+  font-family: Georgia, 'Nanum Myeongjo', serif;
 }
 
 .Hello {

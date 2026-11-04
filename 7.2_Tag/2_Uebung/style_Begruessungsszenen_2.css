@@ -1,28 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;   
-  background: #0f1322;
-  color: #efe6d8;
-  font-family: Georgia, serif;
+  text-align: center;
+  background: #1c0f22;
+  color: #d8efd9;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.Hello,
+.Text_2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-style: normal;
+}
+
+.Text_1 {
   font-style: italic;
 }
 
 .Hello {
-  font-size: 10rem;
+  font-size: clamp(3rem, 13vw, 12rem);
 }
 
 .Text_1 {
-  font-size: 4vw;
-  padding-top: 3rem;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
+  padding-top: 1rem;
+  opacity: 0.6;
 }
+
 .Text_2 {
-  font-size: 4vw;
-  padding-top: 5rem;
+  font-size: clamp(1.5rem, 4vw, 4rem);
+  padding-top: 6rem;
 }
 
 @keyframes auftauchen {
@@ -31,12 +43,21 @@ body {
   100% { opacity: 1; letter-spacing: 0; }
 }
 
-.Hello  { 
-  animation: auftauchen 2s ease-out 0s both;
+
+.Hello {
+  animation: auftauchen 4s ease-in-out 0.5s both;
 }
-.Text_1 { 
-  animation: auftauchen 2s ease-out 2.5s both;
+
+.Text_1 {
+  animation: auftauchen 1s ease-out 3.5s both;
 }
-.Text_2 { 
-  animation: auftauchen 2s ease-out 5s both;
+
+.Text_2 {
+  animation: auftauchen 1.5s ease-in-out 7s 3 alternate both;
+}
+
+.Text_2:hover {
+  letter-spacing: 0.15em;
+  color: #8b96f5;
+  transition: letter-spacing 1.5s ease, color 1.5s ease;
 }
