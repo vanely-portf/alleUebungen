@@ -1,36 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;500&display=swap');
 
+:root {
+    --bg: #f4f1ea;
+    --card: #fffdf8;
+    --text: #2b2a28;
+    --muted: #9a958b;
+    --accent: #c0532b;
+    --line: #d9d3c7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--bg);
+    min-height: 100%;
+}
+
+/* Der body wird zur "Buchseite" */
 body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    background-color: #f0f0f0;
+    max-width: 680px;
+    margin: 4rem auto;
+    padding: 3rem 3.5rem 3.5rem;
+    background: var(--card);
+    border-radius: 6px;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        0 12px 40px rgba(60, 45, 20, 0.08);
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text);
+    counter-reset: kapitel;
+}
+
+/* Überschrift – wird automatisch eingefügt */
+body::before {
+    content: "Inhaltsverzeichnis";
+    display: block;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 2.4rem;
+    letter-spacing: -0.02em;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--text);
+}
+
+ul, ol {
+    list-style: none;
     margin: 0;
     padding: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
+/* Einträge */
 li {
-  margin-bottom: 15px;
-  list-style-type: none;
+    list-style: none;
+    counter-increment: kapitel;
 }
 
-a {
-  display: block;
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  color: #222;
-  text-decoration: none;
-  transition: 0.2s;
+li a {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.85rem 0.5rem;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background 0.25s ease, color 0.25s ease, padding 0.25s ease;
 }
 
-a:hover {
-  background-color: #222;
-  color: white;
-  transform: translateY(-2px);
+/* Nummer vor jedem Eintrag: 01, 02, 03 ... */
+li a::before {
+    content: counter(kapitel, decimal-leading-zero);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 0.95rem;
+    color: var(--muted);
+    min-width: 1.8rem;
+    transition: color 0.25s ease;
+}
+
+/* Punktlinie + Pfeil am Ende */
+li a::after {
+    content: "→";
+    flex: 1;
+    text-align: right;
+    color: var(--line);
+    background-image: radial-gradient(circle, var(--line) 1px, transparent 1.5px);
+    background-size: 8px 4px;
+    background-repeat: repeat-x;
+    background-position: left 70%;
+    padding-left: 1rem;
+    transition: color 0.25s ease;
+}
+
+/* Hover-Effekt */
+li a:hover,
+li a:focus-visible {
+    background: #f7efe6;
+    color: var(--accent);
+    padding-left: 1rem;
+    outline: none;
+}
+
+li a:hover::before,
+li a:hover::after,
+li a:focus-visible::before,
+li a:focus-visible::after {
+    color: var(--accent);
+}
+
+/* Handy */
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 2rem 1.25rem;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    body::before {
+        font-size: 1.9rem;
+    }
+
+    li a {
+        font-size: 0.98rem;
+    }
 }
