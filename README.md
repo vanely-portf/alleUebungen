@@ -1,1 +1,1 @@
-https://vanely-portf.github.io/alleUebungen/Index.html
+https://vanely-portf.github.io/Index.html
