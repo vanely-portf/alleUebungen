@@ -13,11 +13,16 @@ body {
 }
 
 .Hello {
-  font-size: 18vw;
+  font-size: 10rem;
 }
 
-.Text_1, .Text_2, .Text_3 {
+.Text_1 {
   font-size: 4vw;
+  padding-top: 3rem;
+}
+.Text_2 {
+  font-size: 4vw;
+  padding-top: 5rem;
 }
 
 @keyframes auftauchen {
@@ -26,7 +31,12 @@ body {
   100% { opacity: 1; letter-spacing: 0; }
 }
 
-.Hello  { animation: auftauchen 2s ease-out 0s both; }
-.Text_1 { animation: auftauchen 2s ease-out 2.5s both; }
-.Text_2 { animation: auftauchen 2s ease-out 4.5s both; }
-.Text_3 { animation: auftauchen 2s ease-out 6.5s both; }
+.Hello  { 
+  animation: auftauchen 2s ease-out 0s both;
+}
+.Text_1 { 
+  animation: auftauchen 2s ease-out 2.5s both;
+}
+.Text_2 { 
+  animation: auftauchen 2s ease-out 5s both;
+}
