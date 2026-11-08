@@ -1,0 +1,11 @@
+h1{
+    color: #6d60ff;
+}
+
+button{
+    background-color: #d5ddff;
+    color: rgb(41, 57, 225);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
