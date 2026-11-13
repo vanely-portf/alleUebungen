@@ -1,0 +1,76 @@
+/* Ohne Media Query: gilt immer (Mobile First) */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #efe6d2;
+  color: #1f1f1f;
+}
+
+.flut {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.feld {
+  margin: 0;
+  padding: 1rem;
+  background: white;
+  font-size: 1.5rem;
+}
+
+/* Ab 48em Breite: drei Dinge wechseln */
+@media (min-width: 48em) {
+  body {
+    background: #d7342b;
+  }
+
+  .flut {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    writing-mode: horizontal-tb;
+    transform: none;
+
+  }
+}
+
+@media (min-width: 64em) {
+  body {
+    background: #2e3050;
+  }
+
+  .flut {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    writing-mode: horizontal-tb;
+    transform: none;
+    color: rgb(154, 184, 238);
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: rgb(238, 56, 56);
+  }
+
+  h1 {
+    color: black;
+    font-size: 6rem;
+  }
+}

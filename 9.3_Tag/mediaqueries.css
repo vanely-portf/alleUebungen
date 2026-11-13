@@ -1,0 +1,80 @@
+@media (max-width: 40em) {
+
+  .plakat {
+    aspect-ratio: auto;
+    height: 100vh;   /* Fallback für ältere Browser */
+    height: 100svh;
+  }
+
+.balken-waagrecht {
+  visibility: hidden;
+}
+
+.balken-senkrecht {
+  grid-column: 1 / 3;
+  grid-row: 5 / 17;
+  justify-self: end;
+  width: 2vw;
+  background: var(--rot);
+    margin-right: -1.5vw;
+}
+
+.mitteilungen {
+    grid-column: 4 / 5;
+    grid-row: 5 / 8;
+    padding-right: 4.5vw;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+}
+
+.typographische {
+    grid-column: 3 / 5;
+    grid-row: 6 / 12;
+    justify-self: start;
+    align-self: start;
+    padding-bottom: 6.5vw;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.kopfzeile {
+    grid-row: 2 / 3;
+    grid-column: 5 / 12;
+    writing-mode: horizontal-tb;
+    text-align: left;
+    font-size: .6rem;
+    padding: 0vw 0vw 0vw 0vw;
+}
+
+.thema {
+    display: flex;
+    grid-column: 8 / 12;
+    grid-row: 5 / 8;
+    flex-direction: column;
+}
+
+.elementare {
+    padding: 2vw 0vw 0vw 0vw
+}
+
+.namen {
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    grid-column: 9 / 13;
+    grid-row: 9 / 11;
+    justify-self: auto;
+    list-style: none;
+    padding: 0vw 0vw 0vw 0vw;
+    border-right: none;
+    border-bottom: 1.6vw solid var(--schwarz);
+    font-size: 2.5vw;
+    font-weight: 500;
+    translate: none;
+}
+}
